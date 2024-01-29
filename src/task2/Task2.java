@@ -8,6 +8,7 @@ package task2;
 */
 public class Task2 {
     public static void plusMinus(String str) {
+
         String[] sentence = str
                 .trim()
                 .replaceAll("[, . ? - ! ; : ]+", " ")
@@ -17,7 +18,6 @@ public class Task2 {
         String shortestWord = sentence[0];
         String longestWord = sentence[0];
 
-//        for (String word : sentence && sentence.length !== 0) {
         for (String word : sentence) {
             if (word.length() <= shortestWord.length()) {
                 shortestWord = word;

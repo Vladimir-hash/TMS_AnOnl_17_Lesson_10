@@ -13,14 +13,15 @@ import java.util.Set;
 
 public class Task3 {
         public static void iAmTired(String str) {
-            int minSizeWord = Integer.MAX_VALUE;
-            String minWord = "";
-
             String[] newStr = str
                     .trim()
                     .replaceAll("[, . ? - ! ; : ]+", " ")
                     .replaceAll("[\s]+", " ")
                     .split(" ");
+            int minSizeWord = Integer.MAX_VALUE;
+            String minWord = newStr[0];
+
+
 
             for (String word : newStr) {
                 Set<Character> charactersOfWord = new HashSet<>();
